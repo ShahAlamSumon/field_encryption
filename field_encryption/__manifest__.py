@@ -6,7 +6,7 @@
     "license": "AGPL-3",
     "author": "Shah Alam Sumon",
     "website": "https://github.com/ShahAlamSumon/field_encryption",
-    "images": ["static/description/banner.png"],
+    "images": ["static/description/banner.gif"],
     "depends": ["base"],
     "external_dependencies": {
         "python": [
