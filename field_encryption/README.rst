@@ -1,3 +1,7 @@
+.. image:: https://www.gnu.org/graphics/agplv3-with-text-162x68.png
+   :target: https://www.gnu.org/licenses/agpl-3.0.html
+   :alt: License: LGPL-v3
+
 ================
 Field Encryption
 ================

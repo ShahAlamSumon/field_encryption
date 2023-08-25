@@ -1,0 +1,62 @@
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <div class="oe_picture" style="max-height: initial;">
+            <h2 class="oe_slogan">Field Encryption</h2>
+            <h4 class="oe_slogan">Overview</h4>
+            <p class="text-center">
+                With this module user can store encrypted field value in database.
+                So no one can see the value from database.
+                Multiple fields can be stored inside single Encrypted Field.
+                Just before storing to database, fields gets serialized, and encrypted.
+                On the other hand, after reading, encrypted field gets decrypted and
+                deserialized and values are available in each field in original form.
+                <br/>
+                I this module encrypted field uses symetrical AES algorithm and .
+            </p>
+            <h4 class="oe_slogan">Configuration</h4>
+            <dl>
+                <dd>This module extends odoo.fields module so it needs to be loaded as server wide module.
+                    This can be achieved by passing
+                </dd>
+                <dt>--load="web,field_encryption"</dt>
+                <dd>or by adding following line to the server config file:
+                </dd>
+                <dt>server_wide_modules = web,field_encryption</dt>
+                <dd>In order to set key for encryption/decryption, add following line to server config file:
+                </dd>
+                <dt>encryption_key='YOUR_KEY'</dt>
+                <dd>You can generate key with python cryptography module like this:
+                </dd>
+                <dt>from cryptography.fernet import Fernet</dt>
+                <dt>Fernet.generate_key().decode()</dt>
+            </dl>
+            <h4 class="oe_slogan">Code Example</h4>
+            <div class="oe_span6">
+                <p class="oe_mt32">
+                    User need to define one additional field with 'Encrypted' type.
+                    Then need to add an attribute "encrypt='encrypted'", in the field which will be encrypted.
+                    Code as like the image.
+                </p>
+
+            </div>
+            <div class="oe_span6">
+                <div class="oe_row_img oe_centered">
+                    <img class="oe_picture oe_screenshot" src="encryptioncode.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <div class="oe_picture" style="max-height: initial;">
+            <div class="oe_slogan" style="margin: 10px 0 0 0;">
+                <a class="btn btn-lg mt8 oe_purple" href="https://logicbite.wordpress.com/contact">
+                    <i class="fa fa-phone" style="margin-right: 6px;"></i>Contact us</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
