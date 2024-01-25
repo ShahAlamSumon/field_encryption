@@ -10,7 +10,7 @@ except (ImportError, IOError) as err:
     _logger.debug(err)
 
 if config.get('encryption_key', False):
-    encryption_key = "8Rr9SfNkzmJj-EqW4YPaQlCqBxbD_1Z7mjL8QOHAPuA==".encode()
+    encryption_key = config.get('encryption_key', False).encode()
 else:
     _logger.warning("encryption_key is not set in configuration parameters."
                     "Using default key! This is not secure!")
